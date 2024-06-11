@@ -1,7 +1,7 @@
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 fn main() {
-    let x = unsafe { Wrapped::new(1., 2., 3., 4., 5.) };
+    let x = unsafe { construct(1., 2., 3., 4., 5.) };
     dbg!(x);
 
     let y = unsafe { x.getReversed() };
